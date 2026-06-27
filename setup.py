@@ -12,8 +12,8 @@ def rl(p):
         f.read(8)
         return np.frombuffer(f.read(), dtype=np.uint8)
 
-np.save('data/X_train.npy', ri('data/train-images.gz'))
-np.save('data/y_train.npy', rl('data/train-labels.gz'))
-np.save('data/X_test.npy',  ri('data/test-images.gz'))
-np.save('data/y_test.npy',  rl('data/test-labels.gz'))
+np.save('data/X_train.npy', ri('data/train-images-idx3-ubyte.gz'))
+np.save('data/y_train.npy', rl('data/train-labels-idx1-ubyte.gz'))
+np.save('data/X_test.npy',  ri('data/t10k-images-idx3-ubyte.gz'))
+np.save('data/y_test.npy',  rl('data/t10k-labels-idx1-ubyte.gz'))
 print("Done! npy files saved to data/")
